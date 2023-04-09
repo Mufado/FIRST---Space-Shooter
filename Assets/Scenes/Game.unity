@@ -472,10 +472,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 32df52eb3b2156343a6ca1cd3e3a5da1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  lives: 0
-  speed: 0
-  collisionDamage: 0
-  fireRate: 0
+  lives: 3
+  speed: 10
+  collisionDamage: 10
+  fireRate: 0.2
   _ammoPrefab: {fileID: 8149988644938036796, guid: e673f12e7569e554b8f3a8719287b2ce, type: 3}
 --- !u!1 &794198969
 GameObject:

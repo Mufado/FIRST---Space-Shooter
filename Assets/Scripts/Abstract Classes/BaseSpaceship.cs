@@ -6,7 +6,7 @@ public abstract class BaseSpaceship : MonoBehaviour
     public float speed;
     public int collisionDamage;
 
-    protected bool IsAlive {
+    public bool IsAlive {
         get
         {
             return lives > GameSettings.Instance.DeathThreshold;

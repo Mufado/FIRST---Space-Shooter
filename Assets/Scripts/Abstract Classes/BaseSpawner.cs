@@ -6,7 +6,7 @@ public abstract class BaseSpawner : MonoBehaviour
     [SerializeField]
     protected GameObject _prefab;
 
-    void Start()
+    protected virtual void Start()
     {
         StartCoroutine(Spawn());
     }
