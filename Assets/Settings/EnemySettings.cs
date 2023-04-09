@@ -9,6 +9,7 @@ public class EnemySettings
     public float RightBound { get; }
     public float TopBound { get; }
     public float BottomBound { get; }
+    public float SpawnTime { get; }
 
     public static EnemySettings Instance
     {
@@ -24,5 +25,6 @@ public class EnemySettings
         RightBound = 9.3f;
         TopBound = 7f;
         BottomBound = -7f;
+        SpawnTime = 1f;
     }
 }

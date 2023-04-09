@@ -72,5 +72,5 @@ crashlytics-build.properties
 /[Aa]ssets/[Ss]treamingAssets/aa/*
 
 # Discord Asset
-/[Aa]ssets/discord_game_sdk/
-/[Aa]ssets/UERP.*
+discord_game_sdk*
+UERP*
