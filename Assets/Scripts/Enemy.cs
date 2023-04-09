@@ -47,6 +47,7 @@ public class Enemy : BaseSpaceship
 
     private void CollideWithShot(Collider other)
     {
+        Destroy(other.gameObject);
         BaseGun gun = other.GetComponent<BaseGun>();
         Damage(gun.damage);
     }
