@@ -1,21 +1,15 @@
 using System.Collections;
 using UnityEngine;
 
-public class EnemySpawnManager : MonoBehaviour
+public class EnemySpawner : BaseSpawner
 {
-    public GameObject enemyPrefab;
-
-    void Start()
-    {
-        StartCoroutine(SpawnEnemies());
-    }
-
-    IEnumerator SpawnEnemies()
+    protected override IEnumerator Spawn()
     {
         while (true)
         {
             Vector3 spawnPosition = new Vector3(Random.Range(EnemySettings.Instance.LeftBound, EnemySettings.Instance.RightBound), EnemySettings.Instance.TopBound);
-            Instantiate(enemyPrefab, spawnPosition, Quaternion.identity);
+            GameObject newEnemy = Instantiate(_prefab, spawnPosition, Quaternion.identity);
+            newEnemy.transform.parent = gameObject.transform;
             yield return new WaitForSeconds(EnemySettings.Instance.SpawnTime);
         }
     }

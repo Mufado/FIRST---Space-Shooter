@@ -231,7 +231,7 @@ GameObject:
   - component: {fileID: 567877493}
   - component: {fileID: 567877494}
   m_Layer: 0
-  m_Name: Enemy Spawn Manager
+  m_Name: Enemy Spawner
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -264,7 +264,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 33b536654c9256141928d1837b11f5bb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  enemyPrefab: {fileID: 0}
+  _prefab: {fileID: 357196332883094831, guid: fe49313d133b54946b9fd6a16684e261, type: 3}
 --- !u!1 &600077962
 GameObject:
   m_ObjectHideFlags: 0
@@ -846,7 +846,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1226819717}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -0.934, y: 0.321, z: -14.053}
+  m_LocalPosition: {x: -0.934, y: 0.321, z: -20.9}
   m_LocalScale: {x: 0.6149, y: 0.6149, z: 0.6149}
   m_ConstrainProportionsScale: 1
   m_Children:
