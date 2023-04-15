@@ -16,7 +16,7 @@ public class Enemy : BaseSpaceship
         LimitMoves();
     }
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerEnter2D(Collider2D other)
     {
         switch (other.tag)
         {
@@ -38,14 +38,14 @@ public class Enemy : BaseSpaceship
         }
     }
 
-    private void CollideWithPlayer(Collider other)
+    private void CollideWithPlayer(Collider2D other)
     {
         Player player = other.GetComponent<Player>();
         Damage(player.collisionDamage);
         player.Damage(collisionDamage);
     }
 
-    private void CollideWithShot(Collider other)
+    private void CollideWithShot(Collider2D other)
     {
         Destroy(other.gameObject);
         BaseGun gun = other.GetComponent<BaseGun>();

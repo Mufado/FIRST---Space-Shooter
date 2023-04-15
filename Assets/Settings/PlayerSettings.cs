@@ -27,6 +27,6 @@ public class PlayerSettings
         RightBound = 9.24f;
         TopBound = 4.98f;
         BottomBound = -4.98f;
-        MuzzlePosition = 0.8f;
+        MuzzlePosition = 1f;
     }
 }
