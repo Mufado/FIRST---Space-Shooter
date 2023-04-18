@@ -4,7 +4,6 @@ public class LaserSettings
 
     public int Damage { get; }
     public float Speed { get; }
-    public float Bound { get; }
 
     public static LaserSettings Instance
     {
@@ -15,6 +14,5 @@ public class LaserSettings
     {
         Damage = 1;
         Speed = 20f;
-        Bound = 8f;
     }
 }

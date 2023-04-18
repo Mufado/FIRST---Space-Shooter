@@ -32,7 +32,7 @@ public class Enemy : BaseSpaceship
 
     protected override void LimitMoves()
     {
-        if (transform.position.y <= -7f)
+        if (transform.position.y <= EnemySettings.Instance.BottomBound)
         {
             transform.position = new Vector3(Random.Range(EnemySettings.Instance.LeftBound, EnemySettings.Instance.RightBound), EnemySettings.Instance.TopBound);
         }
