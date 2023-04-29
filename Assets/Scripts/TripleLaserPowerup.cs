@@ -1,4 +1,4 @@
-public class TripleLaserPowerup : BasePowerup
+public class TripleLaserPowerup : BaseAmmoPowerup
 {
 
 }
