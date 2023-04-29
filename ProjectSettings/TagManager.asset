@@ -6,7 +6,7 @@ TagManager:
   tags:
   - Enemy
   - Gun
-  - Powerup
+  - ChangeAmmoPowerup
   layers:
   - Default
   - TransparentFX
