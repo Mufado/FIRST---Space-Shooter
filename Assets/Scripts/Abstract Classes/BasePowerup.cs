@@ -1,4 +1,3 @@
-using System;
 using UnityEngine;
 
 public class BasePowerup : MonoBehaviour
@@ -15,7 +14,7 @@ public class BasePowerup : MonoBehaviour
         transform.Translate(Vector3.down * PowerupSettings.Instance.DefaultSpeed * Time.deltaTime);
     }
 
-    private void LimitMoves()
+    protected void LimitMoves()
     {
         if (transform.position.y <= PowerupSettings.Instance.DefaultBound)
         {
