@@ -8,6 +8,8 @@ public class PowerupSpawner : BaseSpawner
     private GameObject _speedPrefab;
     [SerializeField]
     private GameObject _tripleLaserPrefab;
+    [SerializeField]
+    private GameObject _shieldPrefab;
 
     private Dictionary<PowerupType, GameObject> _powerupPrefabs;
 
@@ -15,6 +17,7 @@ public class PowerupSpawner : BaseSpawner
     {
         _powerupPrefabs = new Dictionary<PowerupType, GameObject>
         {
+            { PowerupType.Shield, _shieldPrefab },
             { PowerupType.Speed, _speedPrefab},
             { PowerupType.TripleLaser, _tripleLaserPrefab}
         };

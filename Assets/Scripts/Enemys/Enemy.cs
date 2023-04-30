@@ -39,14 +39,14 @@ public class Enemy : BaseSpaceship
     private void CollideWithPlayer(Collider2D other)
     {
         Player player = other.GetComponent<Player>();
-        Damage(player.collisionDamage);
-        player.Damage(collisionDamage);
+        TakeDamage(player.collisionDamage);
+        player.TakeDamage(collisionDamage);
     }
 
     private void CollideWithShot(Collider2D other)
     {
         Destroy(other.gameObject);
         BaseGun gun = other.GetComponent<BaseGun>();
-        Damage(gun.damage);
+        TakeDamage(gun.damage);
     }
 }

@@ -371,10 +371,10 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 643591279}
+  - component: {fileID: 643591280}
   - component: {fileID: 643591278}
   - component: {fileID: 643591281}
   - component: {fileID: 643591282}
-  - component: {fileID: 643591280}
   m_Layer: 0
   m_Name: Player
   m_TagString: Player
@@ -466,6 +466,7 @@ MonoBehaviour:
   collisionDamage: 10
   fireRate: 0.2
   ammoPrefab: {fileID: 4649405390255967543, guid: e673f12e7569e554b8f3a8719287b2ce, type: 3}
+  isShieldActive: 0
 --- !u!61 &643591281
 BoxCollider2D:
   m_ObjectHideFlags: 0
@@ -545,6 +546,7 @@ MonoBehaviour:
   _prefab: {fileID: 6398411914054251714, guid: 4cc9a20d38c89854daaac7141b1082e6, type: 3}
   _speedPrefab: {fileID: 9128052137217987434, guid: 0cbb119087df9c74b81430035d81bf31, type: 3}
   _tripleLaserPrefab: {fileID: 6398411914054251714, guid: 4cc9a20d38c89854daaac7141b1082e6, type: 3}
+  _shieldPrefab: {fileID: 3209388069718581306, guid: a058151a5c804fa4b9fbd8b8e5009c78, type: 3}
 --- !u!4 &698615145
 Transform:
   m_ObjectHideFlags: 0

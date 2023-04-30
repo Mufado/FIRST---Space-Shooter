@@ -10,6 +10,8 @@ public class Player : BaseShooterSpaceship
         }
     }
 
+    public bool isShieldActive = false;
+
     void Start()
     {
         lives = PlayerSettings.Instance.Lives;
@@ -63,5 +65,17 @@ public class Player : BaseShooterSpaceship
         Vector3 laserPosition = new Vector3(transform.position.x, transform.position.y + PlayerSettings.Instance.MuzzlePosition);
 
         Instantiate(ammoPrefab, laserPosition, Quaternion.identity);
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        if (isShieldActive)
+        {
+            isShieldActive = false;
+        }
+        else
+        {
+            base.TakeDamage(damage);
+        }
     }
 }

@@ -25,7 +25,7 @@ public abstract class BaseSpaceship : MonoBehaviour
 
     protected abstract void LimitMoves();
 
-    public void Damage(int damage)
+    public virtual void TakeDamage(int damage)
     {
         lives -= damage;
 

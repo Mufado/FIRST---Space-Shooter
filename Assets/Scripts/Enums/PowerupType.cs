@@ -1,5 +1,6 @@
 public enum PowerupType
 {
     Speed,
-    TripleLaser
+    TripleLaser,
+    Shield
 }
