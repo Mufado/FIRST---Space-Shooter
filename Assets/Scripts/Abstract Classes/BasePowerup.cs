@@ -16,7 +16,7 @@ public class BasePowerup : MonoBehaviour
 
     protected void LimitMoves()
     {
-        if (transform.position.y <= PowerupSettings.Instance.DefaultBound)
+        if (transform.position.y <= PowerupSettings.Instance.DefaultBottomBound)
         {
             Destroy(gameObject);
         }

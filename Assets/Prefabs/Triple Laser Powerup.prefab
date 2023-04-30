@@ -12,7 +12,7 @@ GameObject:
   - component: {fileID: 6398411914054251715}
   - component: {fileID: 8351324056188590885}
   - component: {fileID: -7697680480266494818}
-  - component: {fileID: 355551676}
+  - component: {fileID: 1574235328869560217}
   m_Layer: 0
   m_Name: Triple Laser Powerup
   m_TagString: ChangeAmmoPowerup
@@ -126,7 +126,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   newAmmoPrefab: {fileID: 1328404626515300287, guid: 534dd39047af57b4e90f618af27fe20a, type: 3}
---- !u!95 &355551676
+--- !u!95 &1574235328869560217
 Animator:
   serializedVersion: 5
   m_ObjectHideFlags: 0
@@ -136,7 +136,7 @@ Animator:
   m_GameObject: {fileID: 6398411914054251714}
   m_Enabled: 1
   m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 9100000, guid: 9553795ade4e4684d8f2153d7da3b18c, type: 2}
+  m_Controller: {fileID: 9100000, guid: 3fd96c297f63a1344be91ad01ae5d2ce, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
