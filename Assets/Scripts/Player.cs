@@ -10,7 +10,20 @@ public class Player : BaseShooterSpaceship
         }
     }
 
-    public bool isShieldActive = false;
+    [SerializeField]
+    private GameObject shield;
+
+    private bool _isShieldActive;
+    public bool IsShieldActive
+    {
+        get { return _isShieldActive; }
+
+        set
+        {
+            shield.SetActive(value);
+            _isShieldActive = value;
+        }
+    }
 
     void Start()
     {
@@ -69,13 +82,12 @@ public class Player : BaseShooterSpaceship
 
     public override void TakeDamage(int damage)
     {
-        if (isShieldActive)
+        if (IsShieldActive)
         {
-            isShieldActive = false;
+            IsShieldActive = false;
+            return;
         }
-        else
-        {
-            base.TakeDamage(damage);
-        }
+
+        base.TakeDamage(damage);
     }
 }
