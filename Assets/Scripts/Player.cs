@@ -11,7 +11,7 @@ public class Player : BaseShooterSpaceship
     }
 
     [SerializeField]
-    private GameObject shield;
+    private GameObject _shield;
 
     private bool _isShieldActive;
     public bool IsShieldActive
@@ -20,7 +20,7 @@ public class Player : BaseShooterSpaceship
 
         set
         {
-            shield.SetActive(value);
+            _shield.SetActive(value);
             _isShieldActive = value;
         }
     }
