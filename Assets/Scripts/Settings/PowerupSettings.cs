@@ -3,10 +3,11 @@ public class PowerupSettings
     private static PowerupSettings _instance;
 
     public float DefaultSpeed { get; }
-    public float DefaultTopBound { get; set; }
-    public float DefaultBottomBound { get; set; }
-    public float DefaultLeftBound { get; set; }
-    public float DefaultRightBound { get; set;  }
+    public float DefaultTopBound { get; }
+    public float DefaultBottomBound { get; }
+    public float DefaultLeftBound { get; }
+    public float DefaultRightBound { get;  }
+    public float NewSpeed { get; }
 
     public static PowerupSettings Instance
     {
@@ -20,5 +21,6 @@ public class PowerupSettings
         DefaultBottomBound = -7f;
         DefaultLeftBound = -9f;
         DefaultRightBound = 9f;
+        NewSpeed = 15f;
     }
 }

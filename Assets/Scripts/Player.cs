@@ -34,9 +34,18 @@ public class Player : BaseShooterSpaceship
     {
         switch (other.tag)
         {
-            case "ChangeAmmoPowerup": CollideWithPowerup(other); break;
+            case "Powerup": CollideWithPowerup(other); break;
             default: break;
         }
+    }
+
+    private void CollideWithPowerup(Collider2D other)
+    {
+        Destroy(other.gameObject);
+
+        BasePowerup powerup = other.GetComponent<BasePowerup>();
+
+        powerup.ApplyPowerup(this);
     }
 
     protected override void LimitMoves()
@@ -54,14 +63,5 @@ public class Player : BaseShooterSpaceship
         Vector3 laserPosition = new Vector3(transform.position.x, transform.position.y + PlayerSettings.Instance.MuzzlePosition);
 
         Instantiate(ammoPrefab, laserPosition, Quaternion.identity);
-    }
-
-    private void CollideWithPowerup(Collider2D other)
-    {
-        Destroy(other.gameObject);
-
-        BasePowerup powerup = other.GetComponent<BasePowerup>();
-
-        powerup.ApplyPowerup(this);
     }
 }

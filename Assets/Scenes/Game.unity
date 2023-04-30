@@ -466,7 +466,7 @@ MonoBehaviour:
   speed: 10
   collisionDamage: 10
   fireRate: 0.2
-  _ammoPrefab: {fileID: 4649405390255967543, guid: e673f12e7569e554b8f3a8719287b2ce, type: 3}
+  ammoPrefab: {fileID: 4649405390255967543, guid: e673f12e7569e554b8f3a8719287b2ce, type: 3}
 --- !u!61 &643591281
 BoxCollider2D:
   m_ObjectHideFlags: 0
