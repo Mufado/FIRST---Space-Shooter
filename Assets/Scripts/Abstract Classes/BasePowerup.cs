@@ -1,6 +1,6 @@
 using UnityEngine;
 
-public class BasePowerup : MonoBehaviour
+public abstract class BasePowerup : MonoBehaviour
 {
     protected virtual void Update()
     {
@@ -21,4 +21,6 @@ public class BasePowerup : MonoBehaviour
             Destroy(gameObject);
         }
     }
+
+    public abstract void ApplyPowerup(Player player);
 }
