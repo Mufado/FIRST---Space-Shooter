@@ -26,8 +26,6 @@ public class Enemy : BaseSpaceship
                 CollideWithShot(other); break;
             default: break;
         }
-
-        lives--;
     }
 
     protected override void LimitMoves()
