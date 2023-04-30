@@ -1,3 +1,5 @@
+using UnityEngine;
+
 public class PowerupSettings
 {
     private static PowerupSettings _instance;
@@ -8,6 +10,13 @@ public class PowerupSettings
     public float DefaultLeftBound { get; }
     public float DefaultRightBound { get;  }
     public float NewSpeed { get; }
+    public float DefaultSpawnTime
+    {
+        get
+        {
+            return Random.Range(15f, 20f);
+        }
+    }
 
     public static PowerupSettings Instance
     {
