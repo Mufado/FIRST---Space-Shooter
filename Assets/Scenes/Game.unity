@@ -543,6 +543,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _prefab: {fileID: 6398411914054251714, guid: 4cc9a20d38c89854daaac7141b1082e6, type: 3}
+  _speedPrefab: {fileID: 9128052137217987434, guid: 0cbb119087df9c74b81430035d81bf31, type: 3}
+  _tripleLaserPrefab: {fileID: 6398411914054251714, guid: 4cc9a20d38c89854daaac7141b1082e6, type: 3}
 --- !u!4 &698615145
 Transform:
   m_ObjectHideFlags: 0
