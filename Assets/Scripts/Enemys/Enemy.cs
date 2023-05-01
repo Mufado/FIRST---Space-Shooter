@@ -2,6 +2,8 @@ using UnityEngine;
 
 public class Enemy : BaseSpaceship
 {
+    private int _scoreValue = EnemySettings.Instance.ScoreValue;
+
     void Start()
     {
         lives = EnemySettings.Instance.Lives;
@@ -48,5 +50,19 @@ public class Enemy : BaseSpaceship
         Destroy(other.gameObject);
         BaseGun gun = other.GetComponent<BaseGun>();
         TakeDamage(gun.damage);
+    }
+
+    public override void TakeDamage(int damage)
+    {
+        lives -= damage;
+
+        if (!IsAlive)
+        {
+            Destroy(gameObject);
+
+            Player player = GameObject.Find("Player").GetComponent<Player>();
+
+            player.UpdateScore(_scoreValue);
+        }
     }
 }

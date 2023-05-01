@@ -1,7 +1,12 @@
+using System;
 using UnityEngine;
 
 public class Player : BaseShooterSpaceship
 {
+    [SerializeField]
+    private GameObject _shield;
+    private bool _isShieldActive;
+    private int _score;
     private (float, float) _movesInput
     {
         get
@@ -9,11 +14,6 @@ public class Player : BaseShooterSpaceship
             return (Input.GetAxis("Horizontal"), Input.GetAxis("Vertical"));
         }
     }
-
-    [SerializeField]
-    private GameObject _shield;
-
-    private bool _isShieldActive;
     public bool IsShieldActive
     {
         get { return _isShieldActive; }
@@ -89,5 +89,13 @@ public class Player : BaseShooterSpaceship
         }
 
         base.TakeDamage(damage);
+    }
+
+    public void UpdateScore(int scoreValue)
+    {
+        _score += scoreValue;
+
+        UIManager uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
+        uiManager.UpdateScoreText(_score);
     }
 }
