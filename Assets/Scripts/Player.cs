@@ -6,6 +6,7 @@ public class Player : BaseShooterSpaceship
     [SerializeField]
     private GameObject _shield;
     private bool _isShieldActive;
+    private UIManager _uiManager;
     private int _score;
     private (float, float) _movesInput
     {
@@ -31,6 +32,8 @@ public class Player : BaseShooterSpaceship
         speed = PlayerSettings.Instance.Speed;
         fireRate = PlayerSettings.Instance.FireRate;
         collisionDamage = PlayerSettings.Instance.CollisionDamage;
+
+        _uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
     }
 
     void Update()
@@ -95,7 +98,6 @@ public class Player : BaseShooterSpaceship
     {
         _score += scoreValue;
 
-        UIManager uiManager = GameObject.Find("Canvas").GetComponent<UIManager>();
-        uiManager.UpdateScoreText(_score);
+        _uiManager.UpdateScoreText(_score);
     }
 }

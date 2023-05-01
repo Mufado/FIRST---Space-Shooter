@@ -3,12 +3,15 @@ using UnityEngine;
 public class Enemy : BaseSpaceship
 {
     private int _scoreValue = EnemySettings.Instance.ScoreValue;
+    private Player _player;
 
     void Start()
     {
         lives = EnemySettings.Instance.Lives;
         speed = EnemySettings.Instance.Speed;
         collisionDamage = EnemySettings.Instance.CollisionDamage;
+
+        _player = GameObject.Find("Player").GetComponent<Player>();
     }
 
     void Update()
@@ -23,7 +26,7 @@ public class Enemy : BaseSpaceship
         switch (other.tag)
         {
             case "Player":
-                CollideWithPlayer(other); break;
+                CollideWithPlayer(); break;
             case "Gun":
                 CollideWithShot(other); break;
             default: break;
@@ -38,11 +41,10 @@ public class Enemy : BaseSpaceship
         }
     }
 
-    private void CollideWithPlayer(Collider2D other)
+    private void CollideWithPlayer()
     {
-        Player player = other.GetComponent<Player>();
-        TakeDamage(player.collisionDamage);
-        player.TakeDamage(collisionDamage);
+        TakeDamage(_player.collisionDamage);
+        _player.TakeDamage(collisionDamage);
     }
 
     private void CollideWithShot(Collider2D other)
@@ -60,9 +62,7 @@ public class Enemy : BaseSpaceship
         {
             Destroy(gameObject);
 
-            Player player = GameObject.Find("Player").GetComponent<Player>();
-
-            player.UpdateScore(_scoreValue);
+            _player.UpdateScore(_scoreValue);
         }
     }
 }
