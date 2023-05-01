@@ -14,7 +14,11 @@ public class PlayerSettings
 
     public static PlayerSettings Instance
     {
-        get { return _instance == null ? new PlayerSettings() : _instance; }
+        get
+        {
+            if (_instance == null) _instance = new PlayerSettings();
+            return _instance;
+        }
     }
 
     private PlayerSettings()

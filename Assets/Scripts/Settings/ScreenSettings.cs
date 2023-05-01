@@ -9,7 +9,11 @@ public class ScreenSettings
 
     public static ScreenSettings Instance
     {
-        get { return _instance == null ? new ScreenSettings() : _instance; }
+        get
+        {
+            if (_instance == null) _instance = new ScreenSettings();
+            return _instance;
+        }
     }
 
     private ScreenSettings()

@@ -20,7 +20,11 @@ public class PowerupSettings
 
     public static PowerupSettings Instance
     {
-        get { return _instance == null ? new PowerupSettings() : _instance; }
+        get
+        {
+            if (_instance == null) _instance = new PowerupSettings();
+            return _instance;
+        }
     }
 
     private PowerupSettings()

@@ -10,10 +10,16 @@ public class EnemySettings
     public float TopBound { get; }
     public float BottomBound { get; }
     public float SpawnTime { get; }
+    public int ScoreValue { get; }
+
 
     public static EnemySettings Instance
     {
-        get { return _instance == null ? new EnemySettings() : _instance; }
+        get
+        {
+            if (_instance == null) _instance = new EnemySettings();
+            return _instance;
+        }
     }
 
     private EnemySettings()
@@ -26,5 +32,6 @@ public class EnemySettings
         TopBound = 7f;
         BottomBound = -7f;
         SpawnTime = 0.5f;
+        ScoreValue = 10;
     }
 }

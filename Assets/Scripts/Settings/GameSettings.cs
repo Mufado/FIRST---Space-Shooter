@@ -7,7 +7,11 @@ public class GameSettings
 
     public static GameSettings Instance
     {
-        get { return _instance == null ? new GameSettings() : _instance; }
+        get
+        {
+            if (_instance == null) _instance = new GameSettings();
+            return _instance;
+        }
     }
 
     private GameSettings()

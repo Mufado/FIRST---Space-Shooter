@@ -7,7 +7,11 @@ public class LaserSettings
 
     public static LaserSettings Instance
     {
-        get { return _instance == null ? new LaserSettings() : _instance; }
+        get
+        {
+            if (_instance == null) _instance = new LaserSettings();
+            return _instance;
+        }
     }
 
     public LaserSettings()
